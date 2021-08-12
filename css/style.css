@@ -1,0 +1,266 @@
+@import url("https://v1.fontapi.ir/css/Shabnam");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  direction: rtl; }
+
+body {
+  box-sizing: border-box; }
+
+::selection {
+  background-color: #009ea1;
+  color: #fff; }
+
+html {
+  font-family: "Shabnam", sans-serif; }
+
+.home__header--title {
+  font-size: 2.5rem;
+  color: #009ea1;
+  text-shadow: 0rem 0.2rem 0 #b7e2e8;
+  cursor: default; }
+
+.home__content__header--title {
+  font-size: 1.6rem;
+  color: #009ea1;
+  text-shadow: 0rem 0.2rem 0 #b7e2e8;
+  cursor: default; }
+
+.home__content__header--paragraph {
+  font-size: 1.2rem;
+  text-align: justify;
+  color: #777; }
+
+.home__content__info--icon, .home__content__test--icon, .home__content__buy--icon, .home__content__support--icon {
+  fill: #777; }
+
+.home__content__info--title, .home__content__test--title, .home__content__buy--title, .home__content__support--title {
+  font-size: 1.25rem;
+  color: #009ea1;
+  text-shadow: 0rem 0.15rem 0 #b7e2e8; }
+
+.home__content__info--paragraph, .home__content__test--paragraph, .home__content__buy--paragraph, .home__content__support--paragraph {
+  font-size: 0.95rem;
+  color: #777; }
+
+.app__nav-link {
+  font-size: 2rem;
+  color: #333; }
+
+.app__nav .copyright {
+  font-size: 1.1rem;
+  letter-spacing: 1px; }
+
+.app__nav .chapar {
+  font-size: 1rem;
+  letter-spacing: 1px; }
+
+.apps__automation__content--link {
+  color: #009ea1;
+  font-size: 1.2rem; }
+
+.app {
+  height: 90vh;
+  width: 90vw;
+  background-color: #f4f2f2;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 1rem #ccc;
+  border-radius: 3rem;
+  margin: 5vh auto;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: 1fr; }
+  .app__nav {
+    grid-column: 1 / 2;
+    border-left: 1px solid #ccc;
+    position: relative;
+    display: grid;
+    grid-template-rows: 3fr 7fr; }
+    .app__nav-logo {
+      text-align: center;
+      position: relative; }
+      .app__nav-logo--link {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 5rem;
+        height: auto;
+        fill: transparent;
+        stroke: #009ea1;
+        transform: translate(-50%, -50%); }
+        .app__nav-logo--link svg {
+          width: 100%;
+          height: 100%;
+          fill: transparent;
+          stroke: #009ea1; }
+          .app__nav-logo--link svg:hover {
+            fill: #b7e2e8; }
+    .app__nav a {
+      text-decoration: none; }
+    .app__nav-list {
+      list-style: none;
+      display: grid;
+      grid-auto-rows: max-content; }
+    .app__nav-item {
+      display: grid;
+      position: relative; }
+      .app__nav-item:last-child {
+        border-bottom: 1px solid #ccc; }
+    .app__nav-link label {
+      width: 100%;
+      height: 100%; }
+    .app__nav-link:link, .app__nav-link:visited {
+      border-top: 1px solid #ccc;
+      width: 100%;
+      text-align: center;
+      padding: 0.7rem;
+      transition: color 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
+      z-index: 1; }
+    .app__nav-link::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 3px;
+      background-color: #009ea1;
+      transform: scaleY(0);
+      transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s;
+      z-index: -1; }
+    .app__nav-link:hover, .app__nav-link--active {
+      color: #b7e2e8; }
+      .app__nav-link:hover::before, .app__nav-link:hover::before, .app__nav-link--active::before, .app__nav-link--active::before {
+        transform: scaleY(1);
+        width: 100%; }
+  .app .copyright {
+    position: absolute;
+    bottom: 4rem;
+    right: 0;
+    width: 100%;
+    text-align: center; }
+    .app .copyright a:link,
+    .app .copyright a:visited {
+      color: #009ea1; }
+    .app .copyright a:hover,
+    .app .copyright a:active {
+      color: #b7e2e8; }
+  .app .chapar {
+    position: absolute;
+    bottom: 2rem;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    color: #009ea1; }
+  .app__main {
+    grid-column: 2 /3; }
+
+.home {
+  display: none !important;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1.5fr 6fr; }
+  .home__header {
+    display: grid;
+    place-content: center; }
+  .home__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1fr); }
+    .home__content__header {
+      display: grid;
+      justify-items: center;
+      grid-column: 1 / 3;
+      grid-row: 1 / 2; }
+      .home__content__header--title {
+        align-self: center; }
+      .home__content__header--paragraph {
+        margin: 0 5%; }
+    .home__content__info, .home__content__test, .home__content__buy, .home__content__support {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      grid-template-rows: 1fr 3fr;
+      align-items: center;
+      background-color: #f0eeee;
+      border: 1px solid #ccc;
+      border-radius: 1rem;
+      margin: 5%;
+      transition: box-shadow 0.3s;
+      cursor: default; }
+      .home__content__info--icon, .home__content__test--icon, .home__content__buy--icon, .home__content__support--icon {
+        width: 5rem;
+        height: 5rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 1rem;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        justify-self: center; }
+      .home__content__info--title, .home__content__test--title, .home__content__buy--title, .home__content__support--title {
+        place-self: center;
+        grid-column: 1 / 3;
+        grid-row: 1 / 2; }
+      .home__content__info--paragraph, .home__content__test--paragraph, .home__content__buy--paragraph, .home__content__support--paragraph {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        line-height: 2;
+        list-style: none;
+        padding-left: 1rem; }
+      .home__content__info:hover, .home__content__test:hover, .home__content__buy:hover, .home__content__support:hover {
+        box-shadow: 0rem 0rem 0.8rem #ccc; }
+    .home__content__info {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3; }
+    .home__content__test {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3; }
+    .home__content__buy {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4; }
+    .home__contentsupport {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4; }
+
+.apps {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-template-rows: 40% 40%;
+  gap: 10%;
+  place-content: center; }
+  .apps__automation, .apps__personnel, .apps__store, .apps__phone {
+    background-color: #f0eeee;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: box-shadow 0.3s;
+    cursor: default;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    gap: 2rem; }
+    .apps__automation__header, .apps__personnel__header, .apps__store__header, .apps__phone__header {
+      display: grid;
+      grid-template-columns: 1fr 5fr;
+      align-items: center;
+      gap: 5rem; }
+    .apps__automation svg, .apps__personnel svg, .apps__store svg, .apps__phone svg {
+      height: 5rem;
+      fill: #009ea1; }
+    .apps__automation:hover, .apps__personnel:hover, .apps__store:hover, .apps__phone:hover {
+      box-shadow: 0rem 0rem 0.8rem #ccc; }
+  .apps__automation__content--list {
+    list-style: none;
+    line-height: 2.5; }
+  .apps__automation__content--link {
+    text-decoration: none; }
+    .apps__automation__content--link:hover, .apps__automation__content--link:active {
+      text-shadow: 0 0rem 0.5rem #3ee8f1; }
+
+#apps:checked ~ .apps {
+  display: grid !important; }
