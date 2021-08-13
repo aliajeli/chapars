@@ -51,7 +51,7 @@ html {
 
 .app__nav-link {
   font-size: 2rem;
-  color: #333; }
+  color: #777; }
 
 .app__nav .copyright {
   font-size: 1.1rem;
@@ -61,9 +61,45 @@ html {
   font-size: 1rem;
   letter-spacing: 1px; }
 
-.apps__automation__content--link {
+.apps__automation__header--title, .apps__personnel__header--title, .apps__store__header--title, .apps__phone__header--title {
+  font-size: 1.6rem;
   color: #009ea1;
-  font-size: 1.2rem; }
+  text-shadow: 0rem 0.2rem 0 #b7e2e8;
+  cursor: default; }
+
+.apps__automation__content, .apps__personnel__content, .apps__store__content, .apps__phone__content {
+  color: #777; }
+  .apps__automation__content--link, .apps__personnel__content--link, .apps__store__content--link, .apps__phone__content--link {
+    color: #009ea1;
+    font-size: 1.2rem; }
+
+.downloads__versions__free, .downloads__versions__demo {
+  color: #777; }
+  .downloads__versions__free--title, .downloads__versions__demo--title {
+    font-size: 1.6rem;
+    color: #009ea1;
+    text-shadow: 0rem 0.2rem 0 #b7e2e8;
+    cursor: default; }
+  .downloads__versions__free--item, .downloads__versions__demo--item {
+    font-size: 1.2rem; }
+
+.downloads__database--title, .downloads__sql--title, .downloads__install--title, .downloads__others--title {
+  font-size: 1.3rem;
+  color: #009ea1;
+  text-shadow: 0rem 0.2rem 0 #b7e2e8;
+  cursor: default; }
+
+.downloads__database--link, .downloads__sql--link, .downloads__install--link, .downloads__others--link {
+  color: #009ea1;
+  font-size: 1.3rem;
+  cursor: pointer; }
+
+.downloads__database--content, .downloads__sql--content, .downloads__install--content, .downloads__others--content {
+  font-size: 1.2rem;
+  color: #777; }
+
+.important {
+  font-weight: 700; }
 
 .app {
   height: 90vh;
@@ -161,11 +197,11 @@ html {
     grid-column: 2 /3; }
 
 .home {
-  display: none !important;
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: 1.5fr 6fr; }
+  grid-template-rows: 1.5fr 6fr;
+  display: none; }
   .home__header {
     display: grid;
     place-content: center; }
@@ -233,7 +269,8 @@ html {
   grid-template-columns: 40% 40%;
   grid-template-rows: 40% 40%;
   gap: 10%;
-  place-content: center; }
+  place-content: center;
+  display: none; }
   .apps__automation, .apps__personnel, .apps__store, .apps__phone {
     background-color: #f0eeee;
     border: 1px solid #ccc;
@@ -254,13 +291,93 @@ html {
       fill: #009ea1; }
     .apps__automation:hover, .apps__personnel:hover, .apps__store:hover, .apps__phone:hover {
       box-shadow: 0rem 0rem 0.8rem #ccc; }
-  .apps__automation__content--list {
+  .apps__automation__content--list, .apps__personnel__content--list, .apps__store__content--list, .apps__phone__content--list {
     list-style: none;
     line-height: 2.5; }
-  .apps__automation__content--link {
+  .apps__automation__content--link, .apps__personnel__content--link, .apps__store__content--link, .apps__phone__content--link {
     text-decoration: none; }
-    .apps__automation__content--link:hover, .apps__automation__content--link:active {
+    .apps__automation__content--link:hover, .apps__automation__content--link:active, .apps__personnel__content--link:hover, .apps__personnel__content--link:active, .apps__store__content--link:hover, .apps__store__content--link:active, .apps__phone__content--link:hover, .apps__phone__content--link:active {
       text-shadow: 0 0rem 0.5rem #3ee8f1; }
 
-#apps:checked ~ .apps {
-  display: grid !important; }
+.downloads {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 40% repeat(4, max-content);
+  gap: 2%;
+  padding: 1%; }
+  .downloads ul {
+    list-style: none; }
+  .downloads__versions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1%;
+    place-content: center;
+    align-content: stretch; }
+    .downloads__versions__free, .downloads__versions__demo {
+      background-color: #f0eeee;
+      border: 1px solid #ccc;
+      border-radius: 1rem;
+      padding: 2rem;
+      transition: box-shadow 0.3s;
+      cursor: default;
+      line-height: 2;
+      position: relative; }
+      .downloads__versions__free:hover, .downloads__versions__demo:hover {
+        box-shadow: 0rem 0rem 0.8rem #ccc; }
+      .downloads__versions__free--title, .downloads__versions__demo--title {
+        text-align: center; }
+      .downloads__versions__free--list, .downloads__versions__demo--list {
+        margin-top: 1rem; }
+      .downloads__versions__free--btn-download:link, .downloads__versions__free--btn-download:visited, .downloads__versions__demo--btn-download:link, .downloads__versions__demo--btn-download:visited {
+        text-decoration: none;
+        font-size: 1.4rem;
+        padding: 0.5rem 3rem;
+        color: #009ea1;
+        border: 2px solid #009ea1;
+        border-radius: 1rem;
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: background-color 0.2s, color 0.2s; }
+      .downloads__versions__free--btn-download:hover, .downloads__versions__free--btn-download:active, .downloads__versions__demo--btn-download:hover, .downloads__versions__demo--btn-download:active {
+        background-color: #009ea1;
+        color: #fff;
+        box-shadow: 0rem 0.5rem 0.5rem #b7e2e8; }
+    .downloads__versions__free {
+      grid-column: 2 / 3;
+      grid-row: 1; }
+    .downloads__versions__demo {
+      grid-column: 1 / 2;
+      grid-row: 1; }
+  .downloads__database, .downloads__sql, .downloads__install, .downloads__connect, .downloads__others {
+    cursor: default;
+    display: grid;
+    grid-template-columns: 10% repeat(2, 1fr);
+    gap: 5%;
+    align-items: center;
+    background-color: #f0eeee;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: box-shadow 0.3s; }
+    .downloads__database:hover, .downloads__sql:hover, .downloads__install:hover, .downloads__connect:hover, .downloads__others:hover {
+      box-shadow: 0rem 0rem 0.8rem #ccc; }
+    .downloads__database--link:link, .downloads__database--link:visited, .downloads__sql--link:link, .downloads__sql--link:visited, .downloads__install--link:link, .downloads__install--link:visited, .downloads__connect--link:link, .downloads__connect--link:visited, .downloads__others--link:link, .downloads__others--link:visited {
+      text-decoration: none; }
+    .downloads__database--link:hover, .downloads__database--link:active, .downloads__sql--link:hover, .downloads__sql--link:active, .downloads__install--link:hover, .downloads__install--link:active, .downloads__connect--link:hover, .downloads__connect--link:active, .downloads__others--link:hover, .downloads__others--link:active {
+      text-shadow: 0rem 0.5rem 0.5rem #b7e2e8; }
+  .downloads__sql {
+    grid-template-columns: 10% repeat(3, 1fr); }
+    .downloads__sql--title {
+      grid-column: 1 / 2;
+      grid-row: 1 / 4; }
+    .downloads__sql--link {
+      justify-self: end;
+      line-height: 2; }
+  .downloads__install--content {
+    grid-column: 2 / 4;
+    line-height: 2; }
+  .downloads__others {
+    grid-template-columns: 10% repeat(3, 1fr); }

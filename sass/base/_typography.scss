@@ -82,7 +82,7 @@ html {
 	&__nav {
 		&-link {
 			font-size: 2rem;
-			color: $color-grey-dark-1;
+			color: $color-grey-dark-2;
 		}
 		& .copyright {
 			font-size: 1.1rem;
@@ -96,12 +96,66 @@ html {
 }
 
 .apps {
-	&__automation {
+	&__automation,
+	&__personnel,
+	&__store,
+	&__phone {
+		&__header {
+			&--title {
+				font-size: 1.6rem;
+				color: $color-primary;
+				text-shadow: 0rem 0.2rem 0 $color-tertiory;
+				cursor: default;
+			}
+		}
 		&__content {
+			color: $color-grey-dark-2;
 			&--link {
 				color: $color-primary;
-            font-size: 1.2rem;
+				font-size: 1.2rem;
 			}
 		}
 	}
+}
+.downloads {
+	&__versions {
+		&__free,
+		&__demo {
+			color: $color-grey-dark-2;
+			&--title {
+				font-size: 1.6rem;
+				color: $color-primary;
+				text-shadow: 0rem 0.2rem 0 $color-tertiory;
+				cursor: default;
+			}
+			&--item {
+				font-size: 1.2rem;
+			}
+		}
+	}
+	&__database,
+	&__sql,
+	&__install,
+	&__others {
+		&--title {
+			font-size: 1.3rem;
+			color: $color-primary;
+			text-shadow: 0rem 0.2rem 0 $color-tertiory;
+			cursor: default;
+		}
+		&--link {
+			color: $color-primary;
+			font-size: 1.3rem;
+			cursor: pointer;
+		}
+		&--content {
+			font-size: 1.2rem;
+
+			color: $color-grey-dark-2;
+		}
+	}
+}
+
+.important {
+	font-weight: 700;
 }
