@@ -150,7 +150,6 @@ html {
 		}
 		&--content {
 			font-size: 1.2rem;
-
 			color: $color-grey-dark-2;
 		}
 	}
@@ -158,4 +157,103 @@ html {
 
 .important {
 	font-weight: 700;
+}
+
+.buy {
+	color: $color-grey-dark-2;
+	&--title {
+		font-size: 1.3rem;
+		color: $color-primary;
+		text-shadow: 0rem 0.2rem 0 $color-tertiory;
+		cursor: default;
+		text-align: center;
+	}
+	&__step-1,
+	&__step-2,
+	&__step-3,
+	&__step-4 {
+		display: grid;
+		grid-template-columns: 10% 1fr;
+		&--title {
+			font-size: 1.1rem;
+			color: $color-primary;
+			text-shadow: 0rem 0.2rem 0 $color-tertiory;
+			cursor: default;
+		}
+		&--content {
+			font-size: 1rem;
+			color: $color-grey-dark-2;
+		}
+	}
+}
+
+.support {
+	color: $color-grey-dark-2;
+
+	&__details,
+	&__waranty,
+	&__post,
+	&__apps {
+		& svg {
+			fill: $color-primary;
+		}
+		&--link {
+			& svg {
+				fill: $color-primary;
+			}
+			color: $color-primary;
+			font-size: 1.1rem;
+			cursor: pointer;
+		}
+	}
+
+	&__details {
+		&--title {
+			font-size: 1.3rem;
+			color: $color-primary;
+			text-shadow: 0rem 0.2rem 0 $color-tertiory;
+			cursor: default;
+		}
+		&--list {
+			list-style: none;
+		}
+	}
+	&__waranty {
+		&--list {
+			list-style: none;
+		}
+	}
+
+	&__apps {
+		&--list {
+			list-style: none;
+		}
+	}
+}
+
+.contact-us {
+	color: $color-grey-dark-2;
+
+	&__phone,
+	&__request {
+		&--title {
+			font-size: 1.6rem;
+			color: $color-primary;
+			text-shadow: 0rem 0.2rem 0 $color-tertiory;
+			cursor: default;
+		}
+		&__form {
+			&__group {
+				&--input {
+					font-family: "Shabnam", sans-serif;
+				}
+				&--submit {
+					font-family: "Shabnam", sans-serif;
+				}
+			}
+		}
+		&--list {
+			font-size: 1.2rem;
+		}
+	}
 }
