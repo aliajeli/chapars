@@ -257,3 +257,11 @@ html {
 		}
 	}
 }
+.about-us {
+	&--title {
+		font-size: 1.6rem;
+		color: $color-primary;
+		text-shadow: 0rem 0.2rem 0 $color-tertiory;
+		cursor: default;
+	}
+}
