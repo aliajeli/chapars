@@ -26,7 +26,7 @@ html {
 .home {
 	&__header {
 		&--title {
-			font-size: 2.5rem;
+			font-size: 3.5rem;
 			color: $color-primary;
 			text-shadow: 0rem 0.2rem 0 $color-tertiory;
 			cursor: default;
@@ -38,14 +38,14 @@ html {
 	&__content {
 		&__header {
 			&--title {
-				font-size: 1.6rem;
+				font-size: 2rem;
 				color: $color-primary;
 				text-shadow: 0rem 0.2rem 0 $color-tertiory;
 				cursor: default;
 			}
 
 			&--paragraph {
-				font-size: 1.2rem;
+				font-size: 1.6rem;
 				text-align: justify;
 				color: $color-grey-dark-2;
 			}
@@ -59,24 +59,18 @@ html {
 				fill: $color-grey-dark-2;
 			}
 			&--title {
-				font-size: 1.25rem;
+				font-size: 1.8rem;
 				color: $color-primary;
 				text-shadow: 0rem 0.15rem 0 $color-tertiory;
 			}
 
 			&--paragraph {
-				font-size: 0.95rem;
+				font-size: 1.4rem;
 				color: $color-grey-dark-2;
 			}
 		}
 	}
 }
-
-// .heading--3 {
-// 	font-size: 2rem;
-// 	color: $color-white;
-// 	text-shadow: 0rem 0.3rem 0.8rem $color-black;
-// }
 
 .app {
 	&__nav {
@@ -102,7 +96,7 @@ html {
 	&__phone {
 		&__header {
 			&--title {
-				font-size: 1.6rem;
+				font-size: 2rem;
 				color: $color-primary;
 				text-shadow: 0rem 0.2rem 0 $color-tertiory;
 				cursor: default;
@@ -110,9 +104,14 @@ html {
 		}
 		&__content {
 			color: $color-grey-dark-2;
+			font-size: 1.2rem;
+
+			&--item:nth-child(even) {
+				padding-right: 1rem;
+			}
 			&--link {
 				color: $color-primary;
-				font-size: 1.2rem;
+				font-size: 1.5rem;
 			}
 		}
 	}
@@ -162,7 +161,7 @@ html {
 .buy {
 	color: $color-grey-dark-2;
 	&--title {
-		font-size: 1.3rem;
+		font-size: 1.8rem;
 		color: $color-primary;
 		text-shadow: 0rem 0.2rem 0 $color-tertiory;
 		cursor: default;
@@ -175,13 +174,13 @@ html {
 		display: grid;
 		grid-template-columns: 10% 1fr;
 		&--title {
-			font-size: 1.1rem;
+			font-size: 1.4rem;
 			color: $color-primary;
 			text-shadow: 0rem 0.2rem 0 $color-tertiory;
 			cursor: default;
 		}
 		&--content {
-			font-size: 1rem;
+			font-size: 1.3rem;
 			color: $color-grey-dark-2;
 		}
 	}
@@ -202,19 +201,23 @@ html {
 				fill: $color-primary;
 			}
 			color: $color-primary;
-			font-size: 1.1rem;
+			font-size: 1.3rem;
 			cursor: pointer;
 		}
 	}
 
 	&__details {
 		&--title {
-			font-size: 1.3rem;
+			font-size: 2rem;
 			color: $color-primary;
 			text-shadow: 0rem 0.2rem 0 $color-tertiory;
 			cursor: default;
 		}
+		&--content {
+			font-size: 1.6rem;
+		}
 		&--list {
+			font-size: 1.5rem;
 			list-style: none;
 		}
 	}
@@ -228,6 +231,20 @@ html {
 		&--list {
 			list-style: none;
 		}
+		&--item {
+			font-size: 1.5rem;
+		}
+	}
+}
+
+.customers {
+	&__city {
+		.btn-city {
+			font-size: 2rem;
+		}
+		&--item {
+			font-size: 1.7rem;
+		}
 	}
 }
 
@@ -237,7 +254,7 @@ html {
 	&__phone,
 	&__request {
 		&--title {
-			font-size: 1.6rem;
+			font-size: 2rem;
 			color: $color-primary;
 			text-shadow: 0rem 0.2rem 0 $color-tertiory;
 			cursor: default;
@@ -246,6 +263,7 @@ html {
 			&__group {
 				&--input {
 					font-family: "Shabnam", sans-serif;
+					font-size: 1.3rem;
 				}
 				&--submit {
 					font-family: "Shabnam", sans-serif;
@@ -253,17 +271,16 @@ html {
 			}
 		}
 		&--list {
-			font-size: 1.2rem;
+			font-size: 1.6rem;
 		}
 	}
 }
 .about-us {
 	&--title,
-   &__company--title {
-		font-size: 1.6rem;
+	&__company--title {
+		font-size: 2rem;
 		color: $color-primary;
 		text-shadow: 0rem 0.2rem 0 $color-tertiory;
 		cursor: default;
 	}
-
 }

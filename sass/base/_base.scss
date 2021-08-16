@@ -10,11 +10,11 @@ html {
 	// This defines what 1 rem is
 	font-size: 62.5%; //1rem = 10px - 10px/19px
 	direction: rtl;
+	color: $color-grey-dark-2;
 }
 
 body {
 	box-sizing: border-box;
-
 }
 
 ::selection {
