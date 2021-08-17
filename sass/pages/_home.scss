@@ -46,7 +46,7 @@
 				height: auto;
 				fill: transparent;
 				stroke: $color-primary;
-				padding: 0.5rem;
+				padding: 1rem;
 				transform: translate(-50%, -50%);
 				@media only screen and (max-width: 800px) {
 					transform: translate(-50%, -50%) scale(0.5);
@@ -75,16 +75,23 @@
 				grid-template-columns: repeat(7, 1fr);
 			}
 			@media only screen and (max-width: 620px) {
-				grid-template-columns: repeat(4, 1fr);
-				grid-template-rows: repeat(2, 1fr);
+				// 	grid-template-columns: repeat(4, 1fr);
+				// 	grid-template-rows: repeat(2, 1fr);
+				grid-template-columns: repeat(7, max-content);
+				gap: 0.5rem;
+				grid-template-rows: max-content;
 			}
 		}
 		&-item {
 			display: grid;
 			position: relative;
 			& > a {
-				@media only screen and (max-width: 360px) {
+				@media only screen and (max-width: 620px) {
 					font-size: 1.6rem;
+				}
+
+				@media only screen and (max-width: 460px) {
+					font-size: 1.2rem;
 				}
 			}
 			&:last-child {
