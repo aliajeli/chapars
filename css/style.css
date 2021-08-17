@@ -303,15 +303,20 @@ html {
       @media only screen and (max-width: 620px) {
         .app__nav-list {
           grid-template-columns: repeat(7, 1fr);
-          gap: 1rem;
-          grid-template-rows: max-content; } }
+          grid-template-rows: max-content;
+          gap: 1rem; } }
       @media only screen and (max-width: 480px) {
         .app__nav-list {
           grid-template-columns: repeat(7, max-content);
+          gap: 2rem; } }
+      @media only screen and (max-width: 450px) {
+        .app__nav-list {
           gap: 1.5rem; } }
       @media only screen and (max-width: 420px) {
         .app__nav-list {
-          grid-template-columns: repeat(7, max-content);
+          gap: 1.2rem; } }
+      @media only screen and (max-width: 400px) {
+        .app__nav-list {
           gap: 1rem; } }
     .app__nav-item {
       display: grid;
@@ -323,7 +328,13 @@ html {
             font-size: 1.6rem; } }
         @media only screen and (max-width: 480px) {
           .app__nav-item > a {
+            font-size: 1.6rem; } }
+        @media only screen and (max-width: 420px) {
+          .app__nav-item > a {
             font-size: 1.5rem; } }
+        @media only screen and (max-width: 400px) {
+          .app__nav-item > a {
+            font-size: 1.4rem; } }
       .app__nav-item:last-child {
         border-bottom: 1px solid #ccc; }
         @media only screen and (max-width: 800px) {

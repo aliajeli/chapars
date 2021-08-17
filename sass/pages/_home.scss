@@ -75,18 +75,21 @@
 				grid-template-columns: repeat(7, 1fr);
 			}
 			@media only screen and (max-width: 620px) {
-				// 	grid-template-columns: repeat(4, 1fr);
-				// 	grid-template-rows: repeat(2, 1fr);
 				grid-template-columns: repeat(7, 1fr);
-				gap: 1rem;
 				grid-template-rows: max-content;
+				gap: 1rem;
 			}
 			@media only screen and (max-width: 480px) {
 				grid-template-columns: repeat(7, max-content);
+				gap: 2rem;
+			}
+			@media only screen and (max-width: 450px) {
 				gap: 1.5rem;
 			}
 			@media only screen and (max-width: 420px) {
-				grid-template-columns: repeat(7, max-content);
+				gap: 1.2rem;
+			}
+			@media only screen and (max-width: 400px) {
 				gap: 1rem;
 			}
 		}
@@ -101,7 +104,13 @@
 				}
 
 				@media only screen and (max-width: 480px) {
+					font-size: 1.6rem;
+				}
+				@media only screen and (max-width: 420px) {
 					font-size: 1.5rem;
+				}
+				@media only screen and (max-width: 400px) {
+					font-size: 1.4rem;
 				}
 			}
 			&:last-child {
