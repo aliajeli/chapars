@@ -78,17 +78,23 @@ html {
 			font-size: 2rem;
 			color: $color-grey-dark-2;
 		}
-		& .copyright {
-			font-size: 1.1rem;
-			letter-spacing: 1px;
-		}
-		& .chapar {
-			font-size: 1rem;
-			letter-spacing: 1px;
-		}
 	}
 }
 
+.copyright {
+	font-size: 1.1rem;
+	letter-spacing: 1px;
+	@media only screen and (max-width: 1500px) {
+		font-size: 1.2rem;
+	}
+}
+.chapar {
+	font-size: 1.2rem;
+	letter-spacing: 1px;
+	@media only screen and (max-width: 1500px) {
+		font-size: 1.3rem;
+	}
+}
 .apps {
 	&__automation,
 	&__personnel,
@@ -146,6 +152,9 @@ html {
 			color: $color-primary;
 			font-size: 1.3rem;
 			cursor: pointer;
+			@media only screen and (max-width: 1025px) {
+				font-size: 1.2rem;
+			}
 		}
 		&--content {
 			font-size: 1.2rem;
@@ -203,6 +212,9 @@ html {
 			color: $color-primary;
 			font-size: 1.3rem;
 			cursor: pointer;
+			@media only screen and (max-width: 1025px) {
+				font-size: 1.2rem;
+			}
 		}
 	}
 

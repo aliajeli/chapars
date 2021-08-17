@@ -56,21 +56,3 @@ btnCity.forEach((city) => {
 		console.log(city);
 	});
 });
-// for (let i = 0; i < btnCity.length; i++) {
-// 	btnCity[i].addEventListener("click", function (e) {
-// 		this.parentNode.classList.toggle("grid-up");
-// 	});
-// }
-
-const btnPage1 = document.querySelector("#page-1");
-const btnPage2 = document.querySelector("#page-2");
-const teh = document.querySelector(".teh");
-
-btnPage1.addEventListener("click", function () {
-	teh.classList.add("page-1");
-	teh.classList.remove("page-2");
-});
-btnPage2.addEventListener("click", function () {
-	teh.classList.add("page-2");
-	teh.classList.remove("page-1");
-});
