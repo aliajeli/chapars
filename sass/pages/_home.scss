@@ -77,21 +77,31 @@
 			@media only screen and (max-width: 620px) {
 				// 	grid-template-columns: repeat(4, 1fr);
 				// 	grid-template-rows: repeat(2, 1fr);
-				grid-template-columns: repeat(7, max-content);
-				gap: 0.5rem;
+				grid-template-columns: repeat(7, 1fr);
+				gap: 1rem;
 				grid-template-rows: max-content;
+			}
+			@media only screen and (max-width: 480px) {
+				grid-template-columns: repeat(7, max-content);
+				gap: 1.5rem;
+			}
+			@media only screen and (max-width: 420px) {
+				grid-template-columns: repeat(7, max-content);
+				gap: 1rem;
 			}
 		}
 		&-item {
 			display: grid;
 			position: relative;
 			& > a {
+				font-weight: bold;
+
 				@media only screen and (max-width: 620px) {
 					font-size: 1.6rem;
 				}
 
-				@media only screen and (max-width: 460px) {
-					font-size: 1.2rem;
+				@media only screen and (max-width: 480px) {
+					font-size: 1.5rem;
 				}
 			}
 			&:last-child {
@@ -111,7 +121,7 @@
 				border-top: 1px solid $color-grey-light-4;
 				width: 100%;
 				text-align: center;
-				padding: 0.7rem;
+				padding: 1rem 0;
 				transition: color 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
 				z-index: 1;
 				@media only screen and (max-width: 800px) {
